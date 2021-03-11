@@ -1,0 +1,49 @@
+import axios from 'axios'
+export default {
+  install(Vue) {
+    // Create a custom axios instance
+    const authApi = axios.create({
+      baseURL: process.env.VUE_APP_API_URL,
+      headers: {
+        // 'Access-Control-Allow-Origin': '*',
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: '',
+      },
+    })
+
+    // Add a request interceptor
+    authApi.interceptors.request.use(
+      (config) => {
+        config.headers.Authorization =
+          'Bearer ' + Vue.$store.state.auth.data.token
+        if (process.env.NODE_ENV === 'development') {
+          console.log('DevOnly | Authenticated API executed')
+        }
+        // Must return config
+        return config
+      },
+      (error) => {
+        // Do something with request error
+        return Promise.reject(error)
+      }
+    )
+
+    // Add a response interceptor
+    authApi.interceptors.response.use(
+      (response) => {
+        // Any status code that lie within the range of 2xx cause this function to trigger
+        // Do something with response data
+        return response
+      },
+      (error) => {
+        // Any status codes that falls outside the range of 2xx cause this function to trigger
+        // Do something with response error
+        return Promise.reject(error)
+      }
+    )
+
+    // Inject to context as $authApi
+    Vue.prototype.$authApi = authApi
+  },
+}
