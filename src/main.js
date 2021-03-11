@@ -13,7 +13,7 @@ import authApi from '@services/auth'
 import { globalMixin } from '@mixins/global'
 //
 import { utils } from '@utils'
-import Root from '@/Root.vue'
+import App from '@/App.vue'
 import '@core/assets/css/main.css'
 import '@core/assets/scss/main.scss'
 
@@ -28,5 +28,5 @@ new Vue({
   i18n: i18nPlugin,
   router,
   store,
-  render: (h) => h(Root),
+  render: (h) => h(App),
 }).$mount('#app')

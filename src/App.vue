@@ -22,9 +22,9 @@ import errorLayout from '@layouts/error/index.vue'
 import mobileLayout from '@layouts/responsive/mobile.vue'
 
 import { camelCase } from 'lodash'
-// Root component
+// App component
 export default {
-  name: 'Root',
+  name: 'App',
   components: {
     defaultLayout,
     blankLayout,
