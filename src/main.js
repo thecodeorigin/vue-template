@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import router from './router'
 import store from './store'
+import VueCompositionAPI from '@vue/composition-api'
+
+Vue.use(VueCompositionAPI)
 
 Vue.config.productionTip = false
 // Plugins
@@ -13,6 +16,8 @@ import authApi from '@services/auth'
 import { globalMixin } from '@mixins/global'
 //
 import { utils } from '@utils'
+// Vuex constants
+import { rootActions } from './store/index'
 import App from '@/App.vue'
 import '@core/assets/css/main.css'
 import '@core/assets/scss/main.scss'
@@ -29,4 +34,7 @@ new Vue({
   router,
   store,
   render: (h) => h(App),
+  created() {
+    this.$store.dispatch(rootActions.VUE_SERVER_INIT)
+  },
 }).$mount('#app')

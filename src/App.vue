@@ -57,8 +57,6 @@ export default {
       // For example: $bus.$emit('layout', 'unauth') will trigger 'unauthLayout'
       this.updateLayout(camelCase(layout + '_layout'))
     })
-
-    console.log(this.$store.state)
   },
 }
 </script>
