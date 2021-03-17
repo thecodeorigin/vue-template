@@ -32,21 +32,21 @@
         "src/components/index.scss",
         "src/components/index.css"
       ],
-      "@common/*": ["src/components/common/*"],
+      "@common/*": ["src/core/components/*"],
       "@common": [
-        "src/components/common/index.js",
-        "src/components/common/index.json",
-        "src/components/common/index.vue",
-        "src/components/common/index.scss",
-        "src/components/common/index.css"
+        "src/core/components/index.js",
+        "src/core/components/index.json",
+        "src/core/components/index.vue",
+        "src/core/components/index.scss",
+        "src/core/components/index.css"
       ],
-      "@uncommon/*": ["src/components/uncommon/*"],
+      "@uncommon/*": ["src/components/*"],
       "@uncommon": [
-        "src/components/uncommon/index.js",
-        "src/components/uncommon/index.json",
-        "src/components/uncommon/index.vue",
-        "src/components/uncommon/index.scss",
-        "src/components/uncommon/index.css"
+        "src/components/index.js",
+        "src/components/index.json",
+        "src/components/index.vue",
+        "src/components/index.scss",
+        "src/components/index.css"
       ],
       "@locales/*": ["src/locales/*"],
       "@locales": [
