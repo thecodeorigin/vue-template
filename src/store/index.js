@@ -2,7 +2,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { camelCase } from 'lodash'
-import { authMutations } from './auth/index'
+import { rootActions, rootMutations } from './enums'
+import { authMutations } from './auth/enums'
 
 Vue.use(Vuex)
 
@@ -21,33 +22,9 @@ requireModule.keys().forEach((fileName) => {
   }
 })
 
-/**
- * Root action module's enum
- */
- export const rootActions = {
-  VUE_SERVER_INIT: 'vueServerInit',
-  RESET_STATE: 'resetState',
-}
-
-/**
- * Root mutation module's enum
- */
- export const rootMutations = {
-  SET: {
-    SERVER_STATE: 'SET_SERVER_STATE',
-  },
-  CLEAR: {},
-  TOGGLE: {
-    SIDEBAR_COLLAPSE: 'TOGGLE_SIDEBAR_COLLAPSE',
-  },
-  ADD: {},
-  REMOVE: {},
-  INC: {},
-  SUB: {},
-}
-
-export default new Vuex.Store({
+export const store = new Vuex.Store({
   state: {
+    vueServerReady: false,
     options: {
       sidebarCollapsed: false,
     }
@@ -56,20 +33,26 @@ export default new Vuex.Store({
     TOGGLE_SIDEBAR_COLLAPSE(state) {
       Vue.set(state.options, 'sidebarCollapsed', !state.options.sidebarCollapsed)
     },
-    SET_SERVER_STATE(state, serverReady) {
-      Vue.set(state, 'serverReady', serverReady)
+    SET_VUE_SERVER_READY(state, vueServerReady) {
+      Vue.set(state, 'vueServerReady', vueServerReady)
     },
   },
   actions: {
-    vueServerInit({ commit }) {
-      let auth = null
-      const authString = localStorage.getItem('auth')
-      if (authString) {
-        auth = JSON.parse(authString)
-        commit(authMutations.SET.AUTH, auth)
+    vueServerInit({ rootState, commit }) {
+      if (!rootState.vueServerReady) {
+        const auth = localStorage.getItem('auth')
+        commit(authMutations.SET.AUTH, auth ? JSON.parse(auth) : null, {root: true})
+        commit(rootMutations.SET.VUE_SERVER_READY, true)
       }
-      commit(rootMutations.SET.SERVER_STATE, true) // Server is ready
     }
   },
   modules,
 })
+
+store.dispatch(rootActions.VUE_SERVER_INIT)
+
+const initialStateCopy = JSON.parse(JSON.stringify(store.state))
+
+export function resetVuexState () {
+  store.replaceState(JSON.parse(JSON.stringify(initialStateCopy)))
+}

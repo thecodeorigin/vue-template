@@ -1,5 +1,5 @@
 import axios from 'axios'
-import store from '@store'
+import { store } from '@store'
 import dev from '@utils/functions/dev'
 // Create a custom axios instance
 export const authApi = axios.create({

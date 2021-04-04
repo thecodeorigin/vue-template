@@ -7,6 +7,7 @@ const prettier = require('prettier')
 const aliases = {
   '@': 'src',
   '@assets': 'src/assets',
+  '@styles': 'src/styles',
   '@components': 'src/components',
   '@common': 'src/core/components',
   '@uncommon': 'src/components',

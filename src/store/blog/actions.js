@@ -1,6 +1,6 @@
 import qs from 'qs'
 import { authApi } from '@/core/services/auth'
-import { blogMutations } from './index'
+import { blogMutations } from './enums'
 import { clientApi } from '@/core/services/client'
 
 export const actions = {

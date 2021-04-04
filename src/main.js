@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import router from './router'
-import store from './store'
+import { store } from '@store'
 import VueCompositionAPI from '@vue/composition-api'
 
 Vue.use(VueCompositionAPI)
@@ -17,10 +17,9 @@ import { globalMixin } from '@mixins/global'
 //
 import { utils } from '@utils'
 // Vuex constants
-import { rootActions } from './store/index'
 import App from '@/App.vue'
-import '@core/assets/css/main.css'
-import '@core/assets/scss/main.scss'
+import '@core/styles/css/main.css'
+import '@core/styles/scss/main.scss'
 
 Vue.mixin(globalMixin)
 
@@ -30,11 +29,8 @@ Vue.use(eventBus)
 Vue.use(utils)
 
 new Vue({
-  i18n: i18nPlugin,
-  router,
   store,
+  router,
+  i18n: i18nPlugin,
   render: (h) => h(App),
-  created() {
-    this.$store.dispatch(rootActions.VUE_SERVER_INIT)
-  },
 }).$mount('#app')

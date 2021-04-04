@@ -24,6 +24,14 @@
         "src/assets/index.scss",
         "src/assets/index.css"
       ],
+      "@styles/*": ["src/styles/*"],
+      "@styles": [
+        "src/styles/index.js",
+        "src/styles/index.json",
+        "src/styles/index.vue",
+        "src/styles/index.scss",
+        "src/styles/index.css"
+      ],
       "@components/*": ["src/components/*"],
       "@components": [
         "src/components/index.js",

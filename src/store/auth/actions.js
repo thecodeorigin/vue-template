@@ -1,5 +1,5 @@
 import { clientApi } from '@/core/services/client'
-import { authMutations } from './index'
+import { authMutations } from './enums'
 
 export const actions = {
   /**

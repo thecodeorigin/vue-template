@@ -1,18 +1,8 @@
 @import './colors/all';
 @import './transitions/all';
 @import './fonts/all';
-// No need to import scss mixin here because we won't code scss here
-// We use scss in our .vue component file, therefore scss mixin must be import by hand or globally
-// @import './mixins/all'
 
-// scss is transpile into pure css
-// unless you import scss variables and mixins by hand or globally, you can't use them in your .vue file
-
-// Global CSS variables
-// Do not modify this
-// For color configuration, go to ~/assets/scss/base/utitlities/_variants.scss
 :root {
-
     --color-theme-1: #{$--color-theme-1};
     --color-theme-1-50: #{$--color-theme-1-50};
     --color-theme-1-100: #{$--color-theme-1-100};
@@ -24,7 +14,6 @@
     --color-theme-1-700: #{$--color-theme-1-700};
     --color-theme-1-800: #{$--color-theme-1-800};
     --color-theme-1-900: #{$--color-theme-1-900};
-
     --color-theme-2: #{$--color-theme-2};
     --color-theme-2-50: #{$--color-theme-2-50};
     --color-theme-2-100: #{$--color-theme-2-100};
@@ -36,7 +25,6 @@
     --color-theme-2-700: #{$--color-theme-2-700};
     --color-theme-2-800: #{$--color-theme-2-800};
     --color-theme-2-900: #{$--color-theme-2-900};
-    
     --color-theme-3: #{$--color-theme-3};
     --color-theme-3-50: #{$--color-theme-3-50};
     --color-theme-3-100: #{$--color-theme-3-100};
@@ -49,7 +37,6 @@
     --color-theme-3-800: #{$--color-theme-3-800};
     --color-theme-3-900: #{$--color-theme-3-900};
     --color-theme-3-900: #{$--color-theme-3-900};
-
     --color-theme-4: #{$--color-theme-4};
     --color-theme-4-50: #{$--color-theme-4-50};
     --color-theme-4-100: #{$--color-theme-4-100};
@@ -62,7 +49,6 @@
     --color-theme-4-800: #{$--color-theme-4-800};
     --color-theme-4-900: #{$--color-theme-4-900};
     --color-theme-4-900: #{$--color-theme-4-900};
-
     --color-theme-5: #{$--color-theme-5};
     --color-theme-5-50: #{$--color-theme-5-50};
     --color-theme-5-100: #{$--color-theme-5-100};
@@ -74,7 +60,6 @@
     --color-theme-5-700: #{$--color-theme-5-700};
     --color-theme-5-800: #{$--color-theme-5-800};
     --color-theme-5-900: #{$--color-theme-5-900};
-
     --color-white: #{$--color-white};
     --color-black: #{$--color-black};
     --color-blue: #{$--color-blue};
@@ -89,7 +74,6 @@
     --color-cyan: #{$--color-cyan};
     --color-light: #{$--color-light};
     --color-dark: #{$--color-dark};
-
     --color-primary: #{$--color-primary};
     --color-secondary: #{$--color-secondary};
     --color-success: #{$--color-success};
@@ -97,7 +81,6 @@
     --color-warning: #{$--color-warning};
     --color-info: #{$--color-info};
     --color-gray: #{$--color-gray};
-
     --color-gray-100: #{$--color-gray-100};
     --color-gray-200: #{$--color-gray-200};
     --color-gray-300: #{$--color-gray-300};
@@ -107,7 +90,6 @@
     --color-gray-700: #{$--color-gray-700};
     --color-gray-800: #{$--color-gray-800};
     --color-gray-900: #{$--color-gray-900};
-
     --color-primary-100: #{$--color-primary-100};
     --color-primary-200: #{$--color-primary-200};
     --color-primary-300: #{$--color-primary-300};
@@ -117,7 +99,6 @@
     --color-primary-700: #{$--color-primary-700};
     --color-primary-800: #{$--color-primary-800};
     --color-primary-900: #{$--color-primary-900};
-
     --color-secondary-100: #{$--color-secondary-100};
     --color-secondary-200: #{$--color-secondary-200};
     --color-secondary-300: #{$--color-secondary-300};
@@ -127,7 +108,6 @@
     --color-secondary-700: #{$--color-secondary-700};
     --color-secondary-800: #{$--color-secondary-800};
     --color-secondary-900: #{$--color-secondary-900};
-
     --color-success-100: #{$--color-success-100};
     --color-success-200: #{$--color-success-200};
     --color-success-300: #{$--color-success-300};
@@ -137,7 +117,6 @@
     --color-success-700: #{$--color-success-700};
     --color-success-800: #{$--color-success-800};
     --color-success-900: #{$--color-success-900};
-
     --color-danger-100: #{$--color-danger-100};
     --color-danger-200: #{$--color-danger-200};
     --color-danger-300: #{$--color-danger-300};
@@ -147,7 +126,6 @@
     --color-danger-700: #{$--color-danger-700};
     --color-danger-800: #{$--color-danger-800};
     --color-danger-900: #{$--color-danger-900};
-
     --color-warning-100: #{$--color-warning-100};
     --color-warning-200: #{$--color-warning-200};
     --color-warning-300: #{$--color-warning-300};
@@ -157,7 +135,6 @@
     --color-warning-700: #{$--color-warning-700};
     --color-warning-800: #{$--color-warning-800};
     --color-warning-900: #{$--color-warning-900};
-    
     --color-info-100: #{$--color-info-100};
     --color-info-200: #{$--color-info-200};
     --color-info-300: #{$--color-info-300};

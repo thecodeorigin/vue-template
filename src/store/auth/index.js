@@ -8,26 +8,3 @@ export default {
   mutations,
   actions,
 }
-
-/**
- * Auth mutation module's enum
- */
-export const authMutations = {
-  SET: {
-    AUTH: 'auth/SET_AUTH',
-  },
-  CLEAR: {},
-  TOGGLE: {},
-  ADD: {},
-  REMOVE: {},
-  INC: {},
-  SUB: {},
-}
-
-/**
- * Auth action module's enum
- */
-export const authActions = {
-  LOGIN: 'auth/login',
-  LOGOUT: 'auth/logout',
-}
