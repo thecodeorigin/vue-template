@@ -1,0 +1,74 @@
+{
+  "Vue 2 composition API component": {
+    "scope": "vue",
+    "prefix": "scf",
+    "body": [
+        "<template>",
+        "  <div class=\"${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\">",
+        "    <!--  -->",
+        "  </div>",
+        "</template>",
+        "<script>",
+        "// ${RELATIVE_FILEPATH}",
+        "import { defineComponent } from '@vue/composition-api'",
+        "",
+        "export default defineComponent({",
+        "  name: '${TM_FILENAME_BASE:/pascalcase}',",
+        "  props: {},",
+        "  setup() {",
+        "    //${0}",
+        "  },",
+        "})",
+        "</script>",
+        "",
+        "<style lang=\"scss\" scoped>",
+        ".${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {",
+        "  //",
+        "}",
+        "</style>",
+        "",
+        "<style lang=\"scss\">",
+        ".${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {",
+        "  //",
+        "}",
+        "</style>",
+        ""
+    ],
+    "description": "Scaffold a vue component with vue 2 composition API"
+  },
+  "Vue 2 composition API script": {
+    "scope": "vue",
+    "prefix": "script vue",
+    "body": [
+        "<script>",
+        "import { defineComponent } from '@vue/composition-api'",
+        "",
+        "export default defineComponent({",
+        "  name: '${TM_FILENAME_BASE:/pascalcase}',",
+        "  props: {},",
+        "  setup() {",
+        "    //",
+        "  },",
+        "})",
+        "</script>",
+        ""
+    ],
+    "description": "Vue 2 composition API script tag"
+  },
+  "Vue style tags": {
+    "scope": "vue",
+    "prefix": "style vue",
+    "body": [
+        "",
+        "<style lang=\"scss\" scoped>",
+        "//",
+        "</style>",
+        "",
+        "<style lang=\"scss\">",
+        "//",
+        "</style>",
+        ""
+    ],
+    "description": "Vue style tags, including scoped and non-scoped"
+  }
+}
