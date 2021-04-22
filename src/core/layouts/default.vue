@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { Navbar } from '@common/layout'
+import { Navbar } from '@/core/components/layout'
 export default {
   name: 'DefaultLayout',
   components: {

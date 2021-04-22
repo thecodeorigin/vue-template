@@ -18,8 +18,8 @@ import { globalMixin } from '@mixins/global'
 import { utils } from '@utils'
 // Vuex constants
 import App from '@/App.vue'
-import '@core/styles/css/main.css'
-import '@core/styles/scss/main.scss'
+import '@/core/styles/css/main.css'
+import '@/core/styles/scss/main.scss'
 
 Vue.mixin(globalMixin)
 

@@ -24,38 +24,6 @@
         "src/assets/index.scss",
         "src/assets/index.css"
       ],
-      "@styles/*": ["src/styles/*"],
-      "@styles": [
-        "src/styles/index.js",
-        "src/styles/index.json",
-        "src/styles/index.vue",
-        "src/styles/index.scss",
-        "src/styles/index.css"
-      ],
-      "@components/*": ["src/components/*"],
-      "@components": [
-        "src/components/index.js",
-        "src/components/index.json",
-        "src/components/index.vue",
-        "src/components/index.scss",
-        "src/components/index.css"
-      ],
-      "@common/*": ["src/core/components/*"],
-      "@common": [
-        "src/core/components/index.js",
-        "src/core/components/index.json",
-        "src/core/components/index.vue",
-        "src/core/components/index.scss",
-        "src/core/components/index.css"
-      ],
-      "@uncommon/*": ["src/components/*"],
-      "@uncommon": [
-        "src/components/index.js",
-        "src/components/index.json",
-        "src/components/index.vue",
-        "src/components/index.scss",
-        "src/components/index.css"
-      ],
       "@locales/*": ["src/locales/*"],
       "@locales": [
         "src/locales/index.js",
@@ -80,6 +48,14 @@
         "src/router/index.scss",
         "src/router/index.css"
       ],
+      "@styles/*": ["src/styles/*"],
+      "@styles": [
+        "src/styles/index.js",
+        "src/styles/index.json",
+        "src/styles/index.vue",
+        "src/styles/index.scss",
+        "src/styles/index.css"
+      ],
       "@store/*": ["src/store/*"],
       "@store": [
         "src/store/index.js",
@@ -95,22 +71,6 @@
         "src/use/index.vue",
         "src/use/index.scss",
         "src/use/index.css"
-      ],
-      "@examples/*": ["examples/*"],
-      "@examples": [
-        "examples/index.js",
-        "examples/index.json",
-        "examples/index.vue",
-        "examples/index.scss",
-        "examples/index.css"
-      ],
-      "@core/*": ["src/core/*"],
-      "@core": [
-        "src/core/index.js",
-        "src/core/index.json",
-        "src/core/index.vue",
-        "src/core/index.scss",
-        "src/core/index.css"
       ],
       "@theme/*": ["src/core/components/theme/*"],
       "@theme": [

@@ -11,7 +11,7 @@ export default {
 <style lang="scss" scoped>
 .error__layout {
   background-color: var(--color-danger-700);
-  background-image: url('../../assets/img/bg-green.svg');
+  background-image: url('/img/bg-green.svg');
   background-position: center;
   background-size: cover;
   background-blend-mode: soft-light;
