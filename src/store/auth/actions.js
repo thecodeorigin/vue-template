@@ -1,4 +1,4 @@
-import { clientApi } from '@/core/services/client'
+import { authService } from '@/services/auth'
 import { authMutations } from './enums'
 
 export const actions = {
@@ -10,8 +10,8 @@ export const actions = {
    * @param {String} form.password
    * @returns {void} Return nothing
    */
-  signin({ commit }, form) {
-    const { data } = clientApi.post('/auth/signin', form)
+  async signin({ commit }, form) {
+    const { data } = await authService.signin(form)
     localStorage.setItem('auth', data)
     commit(authMutations.SET.AUTH, data, { root: true }) // Mutating to store for client rendering
     return data

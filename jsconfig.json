@@ -120,13 +120,13 @@
         "src/core/plugins/index.scss",
         "src/core/plugins/index.css"
       ],
-      "@services/*": ["src/core/services/*"],
-      "@services": [
-        "src/core/services/index.js",
-        "src/core/services/index.json",
-        "src/core/services/index.vue",
-        "src/core/services/index.scss",
-        "src/core/services/index.css"
+      "@apis/*": ["src/core/apis/*"],
+      "@apis": [
+        "src/core/apis/index.js",
+        "src/core/apis/index.json",
+        "src/core/apis/index.vue",
+        "src/core/apis/index.scss",
+        "src/core/apis/index.css"
       ],
       "@utils/*": ["src/core/utils/*"],
       "@utils": [

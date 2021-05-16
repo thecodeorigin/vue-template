@@ -9,9 +9,9 @@ Vue.config.productionTip = false
 // Plugins
 import { i18nPlugin } from '@plugins/i18n'
 import { eventBus } from '@plugins/bus'
-// Services
-import clientApi from '@services/client'
-import authApi from '@services/auth'
+// Axios instances
+import clientApi from '@/core/apis/client'
+import authApi from '@/core/apis/auth'
 // Mixins
 import { globalMixin } from '@mixins/global'
 //

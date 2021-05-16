@@ -20,7 +20,7 @@ const aliases = {
   '@middleware': 'src/core/middleware',
   '@mixins': 'src/core/mixins',
   '@plugins': 'src/core/plugins',
-  '@services': 'src/core/services',
+  '@apis': 'src/core/apis',
   '@utils': 'src/core/utils',
 }
 
