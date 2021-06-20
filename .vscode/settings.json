@@ -28,6 +28,7 @@
       "interfaces": "typescript",
       "decorators": "typescript",
       "mixins": "vue",
+      "store-*": "vuex",
       "use": "mappings",
   },
 

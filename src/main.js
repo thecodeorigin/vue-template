@@ -21,6 +21,8 @@ import App from '@/App.vue'
 import '@/core/styles/css/main.css'
 import '@/core/styles/scss/main.scss'
 
+import '@/styles/custom.scss'
+
 Vue.mixin(globalMixin)
 
 Vue.use(clientApi)
