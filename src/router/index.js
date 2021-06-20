@@ -1,35 +1,30 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import about from '@pages/about/config'
-import home from '@pages/home/config'
-// Sandbox
-import sandbox from '@/core/pages/sandbox/config'
-// Auth pages
-import authForgotPassword from '@pages/auth/forgot-password/config'
-import authSignup from '@pages/auth/signup/config'
-import authSignin from '@pages/auth/signin/config'
-// Errors
-import errorPages from '@/core/pages/error/config'
+import dashboard from '@/pages/dashboard/route'
+import projects from '@/pages/projects/route'
+import projectDetail from '@/pages/projects/[slug]/route'
+import authPages from '@/pages/auth/route'
+import sandbox from '@/core/pages/sandbox/route'
+import error500 from '@/core/pages/error/500/route'
+import error404 from '@/core/pages/error/404/route'
 // Middleware
 import { auth } from '@middleware/auth'
 
 Vue.use(VueRouter)
 
 const routes = [
-  ...sandbox.routes,
-  // Pages
-  ...about.routes,
-  ...home.routes,
-  // Auth pages
-  ...authForgotPassword.routes,
-  ...authSignup.routes,
-  ...authSignin.routes,
-  // Error pages
-  ...errorPages.routes,
+  dashboard,
+  projects,
+  projectDetail,
+  authPages,
+  // Core pages
+  sandbox,
+  error500,
+  error404,
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes,
 })
