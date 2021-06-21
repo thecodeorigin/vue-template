@@ -21,9 +21,6 @@ export const utils = {
         case 'directives':
           Vue.directive(moduleName, module)
           break
-        case 'global-components':
-          Vue.component(moduleName, module)
-          break
         case 'functions':
           Vue.prototype[`$${moduleName}`] = module
           break

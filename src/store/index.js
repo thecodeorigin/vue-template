@@ -16,10 +16,7 @@ requireModule.keys().forEach((fileName) => {
   if (fileName === './index.js') return
   // If your module path is something/else, moduleName will be somethingElse
   const moduleName = camelCase(fileName.replace(/(\.\/|index.js)/g, ''))
-  modules[moduleName] = {
-    namespaced: true,
-    ...requireModule(fileName).default,
-  }
+  modules[moduleName] = requireModule(fileName).default
 })
 
 export const store = new Vuex.Store({
@@ -41,7 +38,9 @@ export const store = new Vuex.Store({
     vueServerInit({ rootState, commit }) {
       if (!rootState.vueServerReady) {
         const auth = localStorage.getItem('auth')
-        commit(authMutations.SET.AUTH, auth ? JSON.parse(auth) : null, {root: true})
+        if (auth) {
+          commit(authMutations.SET.AUTH, JSON.parse(auth), {root: true})
+        }
         commit(rootMutations.SET.VUE_SERVER_READY, true)
       }
     }

@@ -1,1 +1,1 @@
-export { default as Auth } from './Auth.vue'
+export { default } from './src/index.vue'

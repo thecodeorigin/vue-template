@@ -23,6 +23,8 @@ import '@/core/styles/scss/main.scss'
 
 import '@/styles/custom.scss'
 
+import '@/core/components/base'
+
 Vue.mixin(globalMixin)
 
 Vue.use(clientApi)
