@@ -1,5 +1,7 @@
 <template>
-  <div class="forgot-password-page"></div>
+  <div class="forgot-password-page">
+    ForgotPasswordPage
+  </div>
 </template>
 <script>
 import { defineComponent } from '@vue/composition-api'

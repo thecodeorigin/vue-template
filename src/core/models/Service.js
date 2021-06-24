@@ -69,7 +69,7 @@ export class Service {
       url: `${this.path}`,
       method: 'delete',
       headers: {
-        Authorization: 'Bearer ' + store.state.auth?.data?.token,
+        Authorization: 'Bearer ' + store.getters['auth/accessToken'],
       },
       data: ids,
     })

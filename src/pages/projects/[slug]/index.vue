@@ -1,26 +1,17 @@
 <template>
-  <div class="dashboard-page">
-    <h1>This is the project wrapper page</h1>
-    <router-view></router-view>
+  <div class="project-detail-page">
+    <h1>This is the project detail page</h1>
   </div>
 </template>
 <script>
-import { store } from '@/store'
-import { defineComponent, onUnmounted } from '@vue/composition-api'
-import { projectDetail } from '@/store-lazy/project-detail'
+import { defineComponent } from '@vue/composition-api'
 export default defineComponent({
-  name: 'ProjectWrapperPage',
-  setup() {
-    // Dynamic vuex module
-    if (!store.hasModule('projectDetail')) {
-      store.registerModule('projectDetail', projectDetail, {
-        preserveState: false,
-      })
+  name: 'ProjectDetailPage',
+  metaInfo() {
+    return {
+      title: this.$route.params.slug,
+      titleTemplate: this.$t(this.$route.meta.title) + ' | %s',
     }
-    // Only exist when viewing this page and it's sub-pages
-    onUnmounted(() => {
-      store.unregisterModule('projectDetail')
-    })
   },
 })
 </script>

@@ -23,7 +23,7 @@ export default defineComponent({
 
     const commonPermissions = _intersectionWith(
       props.allow,
-      store.state.auth?.data?.user?.permissions, // Modify this base on your backend
+      store.getters['auth/permissions'],
       _isEqual
     )
 
