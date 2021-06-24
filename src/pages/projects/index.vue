@@ -1,17 +1,26 @@
 <template>
-  <div class="projects-page">
-    <h1>This is a projects list page</h1>
+  <div class="project-wrapper">
+    <h1>This is the project wrapper page</h1>
+    <router-view></router-view>
   </div>
 </template>
 <script>
-import { defineComponent } from '@vue/composition-api'
+import { store } from '@/store'
+import { defineComponent, onUnmounted } from '@vue/composition-api'
+import { projectStore } from '@/store-lazy/project'
 export default defineComponent({
-  name: 'ProjectsPage',
-  metaInfo() {
-    return {
-      title: this.$route.params.slug,
-      titleTemplate: this.$t(this.$route.meta.title) + ' | %s',
+  name: 'ProjectWrapperPage',
+  setup() {
+    // Dynamic vuex module
+    if (!store.hasModule('project')) {
+      store.registerModule('project', projectStore, {
+        preserveState: false,
+      })
     }
+    // Only exist when viewing this page and it's sub-pages
+    onUnmounted(() => {
+      store.unregisterModule('project')
+    })
   },
 })
 </script>

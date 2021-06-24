@@ -2,28 +2,28 @@ import Vue from 'vue'
 import router from './router'
 import { store } from '@store'
 import VueCompositionAPI from '@vue/composition-api'
+import VueMeta from 'vue-meta'
 
 Vue.use(VueCompositionAPI)
+Vue.use(VueMeta)
 
 Vue.config.productionTip = false
-// Plugins
+
 import { i18nPlugin } from '@plugins/i18n'
 import { eventBus } from '@plugins/bus'
-// Axios instances
+
 import clientApi from '@/core/apis/client'
 import authApi from '@/core/apis/auth'
-// Mixins
-import { globalMixin } from '@mixins/global'
-//
-import { utils } from '@utils'
-// Vuex constants
-import App from '@/App.vue'
-import '@/core/styles/css/main.css'
-import '@/core/styles/scss/main.scss'
 
-import '@/styles/custom.scss'
+import { globalMixin } from '@mixins/global'
+import { utils } from '@utils'
+
+import App from '@/App.vue'
 
 import '@/core/components/base'
+
+import '@/core/styles/css/main.css'
+import '@styles/custom.scss'
 
 Vue.mixin(globalMixin)
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-page">
+  <div class="project-settings-page">
     <h1>This is the project settings page</h1>
     <router-view></router-view>
   </div>

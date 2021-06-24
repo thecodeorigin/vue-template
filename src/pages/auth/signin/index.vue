@@ -1,5 +1,7 @@
 <template>
-  <div class="signin-page"></div>
+  <div class="signin-page">
+    SigninPage
+  </div>
 </template>
 <script>
 import { defineComponent } from '@vue/composition-api'

@@ -1,7 +1,8 @@
 @import './colors/all';
 @import './effects/all';
-@import './transitions/all';
 @import './fonts/all';
+@import './mixins/all';
+@import './transitions/all';
 
 :root {
     --color-theme-1: #{$--color-theme-1};
